@@ -1,6 +1,9 @@
-"""Utilitários"""
+"""
+Módulo de Utilitários
+Fornece ferramentas auxiliares para o pipeline ETL
+"""
 
-# Importar função de geração de logs
+from .logger import ETLLogger, get_logger
 from .generate_test_logs import gerar_logs_teste
 
-__all__ = ['gerar_logs_teste']
+__all__ = ['ETLLogger', 'get_logger', 'gerar_logs_teste']
