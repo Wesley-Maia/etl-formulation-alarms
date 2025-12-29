@@ -17,3 +17,14 @@ Pipeline ETL para processamento de logs de alarmes do sistema de formulação fa
 ```bash
 pip install -r requirements.txt
 ```
+
+## 📝 Histórico de Commits
+
+Este projeto segue o padrão [Conventional Commits](https://www.conventionalcommits.org/):
+
+- `feat:` - Nova funcionalidade
+- `fix:` - Correção de bug
+- `docs:` - Alterações em documentação
+- `style:` - Formatação, ponto e vírgula faltando, etc
+- `refactor:` - Refatoração de código
+- `chore:` - Atualização de tarefas, configurações, etc

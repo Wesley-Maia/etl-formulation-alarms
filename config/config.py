@@ -21,7 +21,7 @@ DATABASE_CONFIG = {
 # Configurações de Extração
 EXTRACT_CONFIG = {
     'source_directory': DATA_DIR,
-    'file_extension': '.txt',
+    'file_extension': '.log',
     'encodings_to_try': ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252', 'windows-1252', 'cp850'],
     'recursive_search': False
 }
