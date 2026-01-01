@@ -84,19 +84,25 @@ def gerar_timestamp(data_base, hora, minuto, segundo, ms):
 
 
 def incrementar_tempo(hora, minuto, segundo, incremento_seg=None):
-    """Incrementa o tempo de forma realista"""
+    """Incrementa o tempo de forma realista - CORRIGIDO"""
     if incremento_seg is None:
         incremento_seg = random.randint(1, 30)
 
     segundo += incremento_seg
-    if segundo >= 60:
+    
+    # Corrigir overflow de segundos
+    while segundo >= 60:
         segundo -= 60
         minuto += 1
-    if minuto >= 60:
-        minuto = 0
+    
+    # Corrigir overflow de minutos
+    while minuto >= 60:
+        minuto -= 60
         hora += 1
+    
+    # Corrigir overflow de horas
     if hora >= 24:
-        hora = 0
+        hora = hora % 24
 
     return hora, minuto, segundo
 
@@ -289,7 +295,7 @@ def gerar_logs_teste(num_arquivos=30, data_inicial=None, pasta_saida=None):
     
     # Header
     print("=" * 80)
-    print("LOG GENERATOR - FORMULARION SYSTEM")
+    print("LOG GENERATOR - FORMULATION SYSTEM")
     print("=" * 80)
     print(f"Start Date: {data_inicial.strftime('%Y-%m-%d')}")
     print(f"Total files: {num_arquivos}")
@@ -323,3 +329,4 @@ def gerar_logs_teste(num_arquivos=30, data_inicial=None, pasta_saida=None):
 
 if __name__ == "__main__":
     gerar_logs_teste()
+    
