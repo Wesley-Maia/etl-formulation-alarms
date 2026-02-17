@@ -37,6 +37,7 @@ data/temp/
 data/*.zip
 data/*.xlsx
 data/*.json
+database/**/*.xlsx
 
 # Build e distribuição
 build/
