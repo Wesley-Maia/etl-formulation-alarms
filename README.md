@@ -31,7 +31,7 @@ Este projeto implementa um pipeline ETL (Extract, Transform, Load) completo para
 
 ### Tecnologias Utilizadas
 
-- **Python 3.9+**: Linguagem principal
+- **Python 3.8+**: Linguagem principal
 - **Pandas**: Manipulação de dados
 - **SQLAlchemy**: ORM e gerenciamento de banco
 - **SQLite**: Banco de dados relacional
@@ -46,7 +46,7 @@ O projeto segue a arquitetura clássica de ETL com separação clara de responsa
 ```
 ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
 │   EXTRACT   │      │  TRANSFORM  │      │    LOAD     │
-│             │─────▶│             │─────▶│             │
+│             │─────>│             │─────>│             │
 │ File Reader │      │ Log Parser  │      │  Database   │
 └─────────────┘      └─────────────┘      └─────────────┘
 ```
